@@ -38,6 +38,9 @@ NS_LOG_COMPONENT_DEFINE ("UdpEchoExample");
 int 
 main (int argc, char *argv[])
 {
+
+  
+
 //
 // Users may find it convenient to turn on explicit debugging
 // for selected modules; the below lines suggest how to do this
@@ -53,9 +56,13 @@ main (int argc, char *argv[])
 //
   bool useV6 = false;
   Address serverAddress;
+  uint32_t packetSize = 1024;
+  Time interPacketInterval = Seconds (0.01);
 
   CommandLine cmd;
   cmd.AddValue ("useIpv6", "Use Ipv6", useV6);
+  cmd.AddValue ("packetSize", "Packet Size", packetSize);
+  cmd.AddValue ("interPacketInterval", "Inter Packet Interval", interPacketInterval);
   cmd.Parse (argc, argv);
 //
 // Explicitly create the nodes required by the topology (shown above).
@@ -110,16 +117,14 @@ main (int argc, char *argv[])
 // Create a UdpEchoClient application to send UDP datagrams from node zero to
 // node one.
 //
-  uint32_t packetSize = 128;
   uint32_t maxPacketCount = 1000;
-  Time interPacketInterval = Seconds (1);
   UdpEchoClientHelper client (serverAddress, port);
   client.SetAttribute ("MaxPackets", UintegerValue (maxPacketCount));
   client.SetAttribute ("Interval", TimeValue (interPacketInterval));
   client.SetAttribute ("PacketSize", UintegerValue (packetSize));
   apps = client.Install (n.Get (0));
   apps.Start (Seconds (2.0));
-  apps.Stop (Seconds (60000.0));
+  apps.Stop (Seconds (10.0));
 
 #if 0
 //
@@ -143,6 +148,13 @@ main (int argc, char *argv[])
 //
   NS_LOG_INFO ("Run Simulation.");
   Simulator::Run ();
+
+ 
+
+
   Simulator::Destroy ();
   NS_LOG_INFO ("Done.");
+
+
+  
 }
