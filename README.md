@@ -1,7 +1,7 @@
 Exp -1
 Implement “TCP client server” architecture using socket programming in C.
-<br>
 Description: retrieve information (any text or system info) from TCP server to TCP client.
+<br>
 Exp -2
 Implement “TCP chat server” using socket programming in C.
 <br>
