@@ -16,6 +16,7 @@ Implement “FTP server” (TCP / UDP) using socket programming in C.
 code for gnuplot
 
 navigate to dir with .txt or .dat file
+
 `
 gnuplot -p -e "plot 'filename.extension' with lines"
 `
