@@ -12,8 +12,9 @@ Description: send information (any text or system info) from UDP client to UDP s
 Exp -4
 Implement “FTP server” (TCP / UDP) using socket programming in C.
 
+<hr>
 
-code for gnuplot
+## code for gnuplot
 
 navigate to dir with .txt or .dat file
 
