@@ -1,3 +1,5 @@
+## Expermiments
+
 Exp -1
 Implement “TCP client server” architecture using socket programming in C.
 Description: retrieve information (any text or system info) from TCP server to TCP client.
@@ -12,8 +14,9 @@ Description: send information (any text or system info) from UDP client to UDP s
 Exp -4
 Implement “FTP server” (TCP / UDP) using socket programming in C.
 
+<hr>
 
-code for gnuplot
+## code for gnuplot
 
 navigate to dir with .txt or .dat file
 
@@ -37,6 +40,7 @@ gnuplot -p -e "plot 'filename.extension' smooth csplines"
 `
 
 to set labels
+
 `
 gnuplot -p -e "set xlabel 'yourxlabel' ; set ylabel 'yourylabel'; plot  'filename.extension' with linespoints"
 `
