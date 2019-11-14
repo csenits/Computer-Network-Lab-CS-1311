@@ -36,6 +36,7 @@ gnuplot -p -e "plot 'filename.extension' smooth csplines"
 `
 
 to set labels
+
 `
 gnuplot -p -e "set xlabel 'yourxlabel' ; set ylabel 'yourylabel'; plot  'filename.extension' with linespoints"
 `
